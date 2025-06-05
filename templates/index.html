@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPKC Fuel Efficiency Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CPKC Fuel Efficiency Dashboard</h1>
+            <p>
+                This dashboard is developed to **analyze and optimize train operations for CPKC (Canadian Pacific Kansas City)** by predicting and managing fuel consumption. 
+                Fuel costs represent one of the largest operating expenses in railway operations, meaning efficient fuel management directly leads to **massive operational cost savings**. 
+                This system aims to maximize operational efficiency and generate financial benefits through data-driven decision-making.
+            </p>
+        </header>
+
+        <section class="summary-cards">
+            <div class="card">
+                <h2>Total Historical Fuel Consumed (Simulated Data)</h2>
+                <p>{{ total_fuel_consumed }} liters</p>
+                <div class="description">
+                    This is the total fuel consumption aggregated from simulated historical data. 
+                    It's crucial for understanding the overall scale of fuel usage across operations.
+                </div>
+            </div>
+            <div class="card">
+                <h2>Average Fuel Efficiency (Simulated Data)</h2>
+                <p>{{ avg_fuel_per_km }} liters/km</p>
+                <div class="description">
+                    Average fuel consumed per kilometer traveled. This metric indicates the overall fuel efficiency of train operations; 
+                    a lower value signifies more efficient operation.
+                </div>
+            </div>
+            <div class="card">
+                <h2>Potential Cost Savings</h2>
+                <p>Millions of Dollars!</p>
+                <div class="description">
+                    The estimated annual cost savings achievable through fuel optimization strategies. 
+                    Leveraging the prediction model and optimization recommendations can significantly reduce operating expenses.
+                </div>
+            </div>
+        </section>
+
+        <section class="chart-section">
+            <h2>Monthly Fuel Consumption Trend</h2>
+            <p class="description">
+                This chart displays the trend of total monthly fuel consumption extracted from historical data. 
+                It allows for intuitive understanding of how seasonal factors and changes in operational patterns impact fuel consumption, 
+                and helps visually identify anomalies or areas requiring improvement.
+            </p>
+            <canvas id="monthlyFuelChart"></canvas>
+        </section>
+
+        <section class="prediction-section">
+            <h2>Predict Fuel Consumption & Optimization Recommendations</h2>
+            <p class="description">
+                By entering train operational conditions (distance, speed, weight, weather), 
+                the machine learning model predicts the estimated fuel consumption for those conditions and 
+                provides tailored recommendations for more efficient operation. 
+                This information directly contributes to fuel cost reduction when planning operations.
+            </p>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="distance">Distance (km):</label>
+                    <input type="number" id="distance" value="1000" min="1" step="10" required>
+                    <div class="description">Enter the total estimated distance to be traveled in kilometers.</div>
+                </div>
+                <div class="form-group">
+                    <label for="speed">Average Speed (km/h):</label>
+                    <input type="number" id="speed" value="70" min="10" max="120" step="5" required>
+                    <div class="description">Enter the average operating speed for the segment in kilometers per hour.</div>
+                </div>
+                <div class="form-group">
+                    <label for="weight">Total Train Weight (tons):</label>
+                    <input type="number" id="weight" value="8000" min="1000" step="1000" required>
+                    <div class="description">Enter the total weight of the train, including locomotives and cargo, in tons.</div>
+                </div>
+                <div class="form-group">
+                    <label for="weather">Weather Condition:</label>
+                    <select id="weather">
+                        <option value="0">0: Clear</option>
+                        <option value="1">1: Rain/Snow (Moderate)</option>
+                        <option value="2">2: Heavy Wind (Severe)</option>
+                    </select>
+                    <div class="description">Select the weather condition expected during operation. Weather significantly impacts fuel consumption.</div>
+                </div>
+            </div>
+            <button onclick="predictFuel()">Predict Fuel & Get Optimization Suggestions</button>
+            
+            <div id="prediction-results" class="results-box">
+                <h3>Prediction Results & Savings Potential:</h3>
+                <p><strong>Predicted Fuel Consumption:</strong> <span id="predictedFuelVal">N/A</span> liters</p>
+                <p><strong>Optimized Estimated Consumption:</strong> <span id="optimizedFuelVal">N/A</span> liters (Simulated)</p>
+                <p><strong>Potential Savings:</strong> <span id="potentialSavingsVal">N/A</span> liters</p>
+                <div class="recommendations">
+                    <h4>Customized Recommendations:</h4>
+                    <ul id="recommendationList">
+                        <li>Enter operational parameters above to receive customized recommendations.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 CPKC Fuel Efficiency Project. All rights reserved.</p>
+        </footer>
+    </div>
+    <script>
+        // Pass monthly average fuel data from Flask to JavaScript
+        const monthlyAvgFuelData = {{ monthly_avg_fuel_json | safe }};
+    </script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

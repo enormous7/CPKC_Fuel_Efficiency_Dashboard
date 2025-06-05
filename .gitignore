@@ -3,6 +3,21 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python/
+venv/
+
+# Data (Exclude generated data and trained model from direct Git tracking)
+data/cpkc_train_fuel_data.csv
+data/fuel_model.pkl
+
+# Reports
+reports/
+
 # C extensions
 *.so
 

@@ -1,0 +1,288 @@
+/* General Body & Container Styling */
+body {
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #eef1f6; /* Soft light gray background */
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    width: 90%;
+    max-width: 1300px; /* Slightly wider for more content */
+    margin: 25px auto;
+    background: #ffffff;
+    padding: 35px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Deeper shadow */
+    border-radius: 12px; /* More rounded corners */
+    border: 1px solid #e0e6ed; /* Subtle border */
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e5e9ec;
+    margin-bottom: 35px;
+}
+
+header h1 {
+    color: #1a237e; /* Deep blue for primary heading */
+    font-size: 2.8em; /* Larger title */
+    margin-bottom: 12px;
+    font-weight: 700; /* Bolder */
+}
+
+header p {
+    font-size: 1.1em;
+    color: #555;
+    max-width: 800px; /* Constrain width for readability */
+    margin: 0 auto;
+}
+
+/* Section Headings */
+h2 {
+    color: #2c3e50; /* Darker grey-blue for section titles */
+    border-bottom: 2px solid #dcdfe4;
+    padding-bottom: 12px;
+    margin-bottom: 25px;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+h3 {
+    color: #34495e; /* Slightly lighter for sub-headings */
+    margin-top: 25px;
+    margin-bottom: 18px;
+    font-size: 1.6em;
+    font-weight: 600;
+}
+
+h4 {
+    color: #34495e;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+/* Summary Cards Styling */
+.summary-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 25px; /* Increased gap */
+    margin-bottom: 45px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #f8faff; /* Very light blue for cards */
+    padding: 30px;
+    border-radius: 12px;
+    flex: 1;
+    min-width: 290px; /* Slightly wider min-width */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* Enhanced shadow */
+    text-align: center;
+    border: 1px solid #e0e9f3;
+    transition: transform 0.2s ease-in-out; /* Subtle hover effect */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift on hover */
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #1a237e;
+    font-size: 1.6em; /* Slightly larger title */
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 12px;
+}
+
+.card p {
+    font-size: 2.2em; /* Larger values */
+    font-weight: bold;
+    color: #007bff; /* Vibrant blue for key figures */
+    margin-bottom: 0;
+}
+
+.card .description {
+    font-size: 0.95em;
+    color: #666;
+    margin-top: 10px;
+    line-height: 1.4;
+}
+
+
+/* Chart & Prediction Section Styling */
+.chart-section, .prediction-section {
+    background: #fdfefe; /* Off-white for sections */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06); /* Consistent shadow */
+    margin-bottom: 40px;
+    border: 1px solid #e0e6ed;
+}
+
+/* Form Styling */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusted grid */
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600; /* Bolder labels */
+    color: #444;
+}
+
+.form-group input[type="number"],
+.form-group select {
+    width: calc(100% - 22px); /* Adjusted for padding */
+    padding: 12px;
+    border: 1px solid #cdd4da;
+    border-radius: 8px; /* More rounded inputs */
+    font-size: 1.05em;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.form-group input[type="number"]:focus,
+.form-group select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* Focus highlight */
+    outline: none;
+}
+
+/* Button Styling */
+button {
+    display: block;
+    width: 100%;
+    padding: 18px 25px; /* Larger button */
+    background-color: #28a745; /* Vibrant green */
+    color: white;
+    border: none;
+    border-radius: 8px; /* Rounded button */
+    font-size: 1.3em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 25px;
+    letter-spacing: 0.5px;
+}
+
+button:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: translateY(-2px); /* Lift effect */
+}
+
+/* Results Box Styling */
+.results-box {
+    background: #eaf6ff; /* Light blue background for results */
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 35px;
+    border: 1px solid #cce0ff;
+}
+
+.results-box p {
+    font-size: 1.2em; /* Larger text for results */
+    margin-bottom: 12px;
+}
+
+.results-box strong {
+    color: #1a237e; /* Dark blue for emphasized text */
+}
+
+.recommendations {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px dashed #c0c8d1; /* Dashed separator */
+}
+
+.recommendations ul {
+    list-style: none; /* No default bullet points */
+    padding-left: 0;
+}
+
+.recommendations li {
+    background-color: #f0f7ff; /* Lighter background for each recommendation */
+    border-left: 4px solid #007bff; /* Blue left border */
+    margin-bottom: 8px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1.05em;
+    color: #333;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding-top: 30px;
+    margin-top: 50px;
+    border-top: 1px solid #e5e9ec;
+    color: #777;
+    font-size: 0.95em;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .form-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    h1 {
+        font-size: 2.2em;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+        margin: 15px auto;
+    }
+    .form-grid {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+    .summary-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 100%;
+        min-width: unset; /* Remove min-width to allow full width */
+    }
+    header h1 {
+        font-size: 1.8em;
+    }
+    header p {
+        font-size: 1em;
+    }
+    .card p {
+        font-size: 1.8em;
+    }
+    button {
+        font-size: 1.1em;
+        padding: 15px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.6em;
+    }
+    .card h2 {
+        font-size: 1.4em;
+    }
+    .prediction-section, .chart-section {
+        padding: 20px;
+    }
+}
