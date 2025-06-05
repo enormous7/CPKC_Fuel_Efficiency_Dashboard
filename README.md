@@ -12,7 +12,7 @@ This dashboard leverages simulated train operational data to:
 
 This project demonstrates strong capabilities in **data science (predictive modeling), full-stack development (Flask web application), data visualization (Chart.js), and a clear understanding of business value creation (direct cost reduction)**. It's built to be accessible even to non-technical users, making data-driven decisions easy and intuitive.
 
-![Project Screenshot](./images/screen.png)
+![Project Screenshot](./image/screen.png)
 
 ## Key Features
 
@@ -23,6 +23,7 @@ This project demonstrates strong capabilities in **data science (predictive mode
 * **Direct Cost Savings Focus**: Explicitly highlights potential fuel (and thus cost) savings, making the business impact clear.
 * **Scalability**: The modular design allows for integration with real-time data sources and more complex optimization algorithms in the future.
 
+'''
 ## Project Structure
 
 CPKC_Fuel_Efficiency_Dashboard/
@@ -45,7 +46,7 @@ CPKC_Fuel_Efficiency_Dashboard/
 ├── .gitignore                  # Specifies intentionally untracked files (e.g., generated data, virtual env)
 ├── requirements.txt            # Lists Python dependencies
 └── README.md                   # Project description and instructions
-
+'''
 
 ## Getting Started
 
