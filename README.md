@@ -23,7 +23,7 @@ This project demonstrates strong capabilities in **data science (predictive mode
 * **Direct Cost Savings Focus**: Explicitly highlights potential fuel (and thus cost) savings, making the business impact clear.
 * **Scalability**: The modular design allows for integration with real-time data sources and more complex optimization algorithms in the future.
 
-'''
+```
 ## Project Structure
 
 CPKC_Fuel_Efficiency_Dashboard/
@@ -46,7 +46,7 @@ CPKC_Fuel_Efficiency_Dashboard/
 ├── .gitignore                  # Specifies intentionally untracked files (e.g., generated data, virtual env)
 ├── requirements.txt            # Lists Python dependencies
 └── README.md                   # Project description and instructions
-'''
+```
 
 ## Getting Started
 
