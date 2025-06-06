@@ -1,8 +1,8 @@
-# CPKC_Fuel_Efficiency_Dashboard# CPKC Fuel Efficiency Dashboard: Optimizing Operations for Cost Savings
+Railway Fuel Efficiency Dashboard: Optimizing Operations for Cost Savings
 
 ## Project Overview
 
-For a large-scale railway company like **CPKC (Canadian Pacific Kansas City)**, fuel is one of the largest operating expenses. Even a small percentage of fuel savings can translate into millions of dollars in annual cost reductions. This project presents a **web-based dashboard** designed to predict train fuel consumption and provide optimization recommendations, directly contributing to significant operational cost savings.
+For a large-scale railway company, fuel is one of the largest operating expenses. Even a small percentage of fuel savings can translate into millions of dollars in annual cost reductions. This project presents a **web-based dashboard** designed to predict train fuel consumption and provide optimization recommendations, directly contributing to significant operational cost savings.
 
 This dashboard leverages simulated train operational data to:
 1.  **Predict** fuel consumption based on various factors (distance, speed, weight, weather).
@@ -26,13 +26,13 @@ This project demonstrates strong capabilities in **data science (predictive mode
 ```
 ## Project Structure
 
-CPKC_Fuel_Efficiency_Dashboard/
+Railway_Fuel_Efficiency_Dashboard/
 ├── src/
 │   ├── app.py                  # Flask web application for the dashboard
 │   ├── data_generator.py       # Script to generate simulated train fuel data
 │   └── model_trainer.py        # Script to train and save the fuel prediction model
 ├── data/
-│   ├── cpkc_train_fuel_data.csv# Simulated historical train operational data
+│   ├── Railway_train_fuel_data.csv# Simulated historical train operational data
 │   └── fuel_model.pkl          # Trained machine learning model (saved)
 ├── templates/
 │   └── index.html              # HTML template for the main dashboard page
@@ -60,13 +60,13 @@ Before you begin, ensure you have the following installed:
 
 ### Installation and Execution
 
-Follow these steps to set up and run the CPKC Fuel Efficiency Dashboard on your local machine:
+Follow these steps to set up and run the Railway Fuel Efficiency Dashboard on your local machine:
 
 1.  **Clone the Repository**:
     Open your terminal or command prompt, navigate to the directory where you want to store your project, and then clone this repository:
     ```bash
-    git clone [https://github.com/enormous7/CPKC_Fuel_Efficiency_Dashboard.git](https://github.com/enormous7/CPKC_Fuel_Efficiency_Dashboard.git)
-    cd CPKC_Fuel_Efficiency_Dashboard
+    git clone [https://github.com/enormous7/Railway_Fuel_Efficiency_Dashboard.git](https://github.com/enormous7/Railway_Fuel_Efficiency_Dashboard.git)
+    cd Railway_Fuel_Efficiency_Dashboard
     ```
 
 2.  **Set Up a Virtual Environment (Highly Recommended)**:
@@ -90,7 +90,7 @@ Follow these steps to set up and run the CPKC Fuel Efficiency Dashboard on your 
     ```bash
     python src/data_generator.py
     ```
-    This command will create the `cpkc_train_fuel_data.csv` file in the `data/` directory. You will see output indicating data generation progress.
+    This command will create the `Railway_train_fuel_data.csv` file in the `data/` directory. You will see output indicating data generation progress.
 
 5.  **Train the Fuel Prediction Model**:
     Once the data is generated, train the machine learning model. This model will be used by the dashboard for predictions:
@@ -107,14 +107,14 @@ Follow these steps to set up and run the CPKC Fuel Efficiency Dashboard on your 
     The terminal will display a message indicating that the Flask development server is running, along with a URL (e.g., `http://127.0.0.1:5000/`).
 
 7.  **Access the Dashboard**:
-    Open your web browser and navigate to the URL provided in your terminal (e.g., `http://127.0.0.1:5000/`). You should now see the CPKC Fuel Efficiency Dashboard.
+    Open your web browser and navigate to the URL provided in your terminal (e.g., `http://127.0.0.1:5000/`). You should now see the Railway Fuel Efficiency Dashboard.
 
     * **Explore Historical Trends**: The top section and the chart will show historical fuel consumption insights.
     * **Predict & Optimize**: Use the "Predict Fuel Consumption & Get Recommendations" section to input hypothetical train parameters. Click "Predict Fuel & Optimize" to see predicted fuel usage, simulated optimized usage, potential savings, and relevant recommendations.
 
     To stop the Flask server, press `Ctrl+C` in your terminal.
 
-## Data Schema (`cpkc_train_fuel_data.csv`)
+## Data Schema (`Railway_train_fuel_data.csv`)
 
 The simulated data includes the following columns:
 
@@ -139,7 +139,7 @@ The simulated data includes the following columns:
 
 ## Potential Enhancements
 
-This project is a strong foundation and can be significantly expanded to provide even greater value to CPKC:
+This project is a strong foundation and can be significantly expanded to provide even greater value to Railway:
 
 * **Real-time Data Integration**: Connect to actual train telemetry, GPS data, and real-time weather APIs for live predictions and dynamic optimization.
 * **Advanced Optimization Algorithms**: Implement more complex optimization models (e.g., genetic algorithms, reinforcement learning) to recommend precise speed profiles and routing changes for maximum fuel efficiency.
@@ -148,11 +148,11 @@ This project is a strong foundation and can be significantly expanded to provide
 * **User Authentication & Roles**: Implement user login, role-based access control for dispatchers, operators, and analysts.
 * **Alerting System**: Set up alerts for anomalous fuel consumption or deviations from optimized plans.
 * **What-If Scenario Analysis**: Allow users to define complex "what-if" scenarios (e.g., "What if we increase train weight by 10% on route X?") and see the fuel impact.
-* **Integration with Operations Systems**: Connect to existing CPKC operational systems for seamless data flow and implementation of recommendations.
+* **Integration with Operations Systems**: Connect to existing Railway operational systems for seamless data flow and implementation of recommendations.
 
 ## Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/YourUsername/CPKC_Fuel_Efficiency_Dashboard/issues).
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/YourUsername/Railway_Fuel_Efficiency_Dashboard/issues).
 
 ## License
 
